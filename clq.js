@@ -1,8 +1,8 @@
 
      window.addEventListener("mouseover",play);
      window.addEventListener("click",play);
-       function play() {
-         document.getElementById("ab").play();
+     function play() {
+            document.getElementById("ab").play();
        }
    
 
