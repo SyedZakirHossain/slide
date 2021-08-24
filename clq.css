@@ -1,141 +1,134 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+body
+{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
 
-        *
-        {
-          margin: 0;
-          padding: 0;
-        }
-      body
-          {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
+height: 100%;
+background: rgb(211, 36, 36);
+overflow: None;
+}
 
-        height: 100%;
-        background: rgb(211, 36, 36);
-        overflow: None;
-        }
+.a{
+  
+  color: rgb(250, 243, 243);
+ 
+}
+.glowing
+{
+position: relative;
+min-width: 750px;
+height: 750px;
+margin: -150px;
+transform-origin: right;
+animation: colorChange 5s linear infinite;
+}
+.glowing:nth-child(even)
+{
+transform-origin:left;
+}
+@keyframes colorChange
+{
+0%
+  {
+    filter: hue-rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100%
+  {
+    filter: hue-rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.glowing span
+{
+position: absolute;
+top: calc(80px * var(--i));
+left:calc(80px * var(--i)) ;
+bottom:calc(80px * var(--i));
+right:calc(80px * var(--i)) ;
+}
+.glowing span:before
+{
+content:'';
+position: absolute;
+top: 50x;
+left: -8px;
+width: 15px;
+height: 15px;
+background: #f00;
+border-radius: 50%;
+}
+.glowing span:nth-child(3n + 1):before
+{
+  background: rgba(134, 255, 0, 1);
+  box-shadow: 0 0 20px rgba(134, 255, 0, 1),
+              0 0 40px rgba(134, 255, 0, 1),
+              0 0 60px rgba(134, 255, 0, 1),
+              0 0 80px rgba(134, 255, 0, 1),
+              0 0 0 8px rgba(134, 255, 0, 1),
 
-       h1{
-        
-          color: rgb(241, 10, 10);
-       
-        }
-       
-      .glowing
-      {
-      /*position:absolute;
-        min-width: 70px;
-        height: 70px;
-        transform-origin: right;
-        animation: colorChange 5s linear infinite;*/
-        position: relative;
-        min-width: 750px;
-        height: 750px;
-        margin: -150px;
-        transform-origin: right;
-        animation: colorChange 5s linear infinite;
-      }
-      .glowing:nth-child(even)
-        {
-        transform-origin:left;
-        }
-      @keyframes colorChange
-      {
-        0%
-          {
-            filter: hue-rotate(0deg);
-            transform: rotate(0deg);
-          }
-          100%
-          {
-            filter: hue-rotate(360deg);
-            transform: rotate(360deg);
-          }
-      }
-      .glowing span
-      {
-       position: absolute;
-       top: calc(80px * var(--i));
-       left:calc(80px * var(--i)) ;
-       bottom:calc(80px * var(--i));
-       right:calc(80px * var(--i)) ;
-      }
-      .glowing span:before
-      {
-        content:'';
-        position: absolute;
-        top: 50x;
-        left: -8px;
-        width: 15px;
-        height: 15px;
-        background: #f00;
-        border-radius: 50%;
-      }
-       .glowing span:nth-child(3n + 1):before
-        {
-          background: rgba(134, 255, 0, 1);
-          box-shadow: 0 0 20px rgba(134, 255, 0, 1),
-                      0 0 40px rgba(134, 255, 0, 1),
-                      0 0 60px rgba(134, 255, 0, 1),
-                      0 0 80px rgba(134, 255, 0, 1),
-                      0 0 0 8px rgba(134, 255, 0, 1),
-      
-        }
-        .glowing span:nth-child(3n + 2):before
-        {
-          background: rgba(255, 214, 0, 1);
-          box-shadow: 0 0 20px rgba(255, 214, 0, 1),
-                      0 0 40px rgba(255, 214, 0, 1),
-                      0 0 60px rgba(255, 214, 0, 1),
-                      0 0 80px rgba(255, 214, 0, 1),
-                      0 0 0 8px rgba(255, 214, 0, 1),
-      
-        }
-        .glowing span:nth-child(3n + 3):before
-        {
-          background: rgba(0, 226, 255, 1);
-          box-shadow: 0 0 20px rgba(0, 226, 255, 1),
-                      0 0 40px rgba(0, 226, 255, 1),
-                      0 0 60px rgba(0, 226, 255, 1),
-                      0 0 80px rgba(0, 226, 255, 1),
-                      0 0 0 8px rgba(0, 226, 255, 1),
-      
-        }
-        .glowing span:nth-child(3n + 1)
-        {
-         animation: animate 2s alternate-reverse infinite; 
-        }
-        .glowing span :nth-child(3n + 2)
-        {
-         animation: animate 1s alternate-reverse infinite; 
-        }
-        .glowing span :nth-child(3n + 3)
-        {
-         animation: animate 2s alternate-reverse infinite; 
-        }
-      @keyframes animate
-      {
-        0%
-        {
-          transform: rotate(0deg);
-        }
-        100%
-        {
-          transform: rotate(360deg);
-        }
-      }
-      @keyframes animate-reverse
-      {
-        0%
-        {
-          transform: rotate(360deg);
-        }
-        100%
-        {
-          transform: rotate(0deg);
-        }
-      }
+}
+.glowing span:nth-child(3n + 2):before
+{
+  background: rgba(255, 214, 0, 1);
+  box-shadow: 0 0 20px rgba(255, 214, 0, 1),
+              0 0 40px rgba(255, 214, 0, 1),
+              0 0 60px rgba(255, 214, 0, 1),
+              0 0 80px rgba(255, 214, 0, 1),
+              0 0 0 8px rgba(255, 214, 0, 1),
+
+}
+.glowing span:nth-child(3n + 3):before
+{
+  background: rgb(7, 7, 238);
+  box-shadow: 0 0 20px rgb(30, 7, 236),
+              0 0 40px rgb(30, 8, 223),
+              0 0 60px rgb(6, 6, 238),
+              0 0 80px rgb(23, 8, 235),
+              0 0 0 8px rgb(42, 6, 245),
+
+}
+.glowing span:nth-child(3n + 1)
+{
+ animation: animate 2s alternate-reverse infinite; 
+}
+.glowing span :nth-child(3n + 2)
+{
+ animation: animate 1s alternate-reverse infinite; 
+}
+.glowing span :nth-child(3n + 3)
+{
+ animation: animate 2s alternate-reverse infinite; 
+}
+@keyframes animate
+{
+0%
+{
+  transform: rotate(0deg);
+}
+100%
+{
+  transform: rotate(360deg);
+}
+}
+@keyframes animate-reverse
+{
+0%
+{
+  transform: rotate(360deg);
+}
+100%
+{
+  transform: rotate(0deg);
+}
+}
 .img{
 position:relative;
 margin-top: 10px;
@@ -162,5 +155,10 @@ animation-iteration-count: infinite;
   position: relative;
   flex: auto;
  }
-       
+ 
+  
+  
+  
+  
+
 
