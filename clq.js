@@ -1,6 +1,6 @@
 
      window.addEventListener("mouseover",play);
-     window.addEventListener("click",play);
+    // window.addEventListener("click",play);
      function play() {
             document.getElementById("ab").play();
        }
